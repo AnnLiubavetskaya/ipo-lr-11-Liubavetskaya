@@ -9,3 +9,6 @@ class Van(Vehicle):
 
     def __str__(self):
         return f"Фургон {self.vehicle_id}, грузоподъемность {self.capacity} тонн, холодильник: {self.is_refrigerated}, текущая загрузка {self.current_load} тонн"
+    
+    def get_load_percentage(self):
+        return (self.current_load / self.capacity) * 100
